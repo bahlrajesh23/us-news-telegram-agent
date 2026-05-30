@@ -3,7 +3,9 @@ name: Daily US News Digest
 on:
   workflow_dispatch:
   schedule:
-    - cron: "5 13 * * *"
+    - cron: "30 3 * * *"
+    - cron: "30 8 * * *"
+    - cron: "30 14 * * *"
 
 jobs:
   run-news-agent:
@@ -21,17 +23,27 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Show files
+      - name: Check required secrets
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: |
-          pwd
-          ls -la
+          if [ -z "$TELEGRAM_BOT_TOKEN" ]; then
+            echo "TELEGRAM_BOT_TOKEN is missing"
+            exit 1
+          fi
+          if [ -z "$TELEGRAM_CHAT_ID" ]; then
+            echo "TELEGRAM_CHAT_ID is missing"
+            exit 1
+          fi
+          echo "Secrets are present"
 
       - name: Run news agent
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          TIMEZONE: America/New_York
-          LOOKBACK_HOURS: "24"
+          TIMEZONE: Asia/Kolkata
+          LOOKBACK_HOURS: "8"
           MAX_ITEMS: "15"
           ENABLE_ARTICLE_SNIPPETS: "true"
           ARTICLE_SNIPPET_LIMIT: "8"
@@ -41,4 +53,4 @@ jobs:
           EXCLUDE_TITLE_KEYWORDS: "newsletter"
           SOURCES_FILE: "sources.json"
           STATE_FILE: "state.json"
-        run: python new_agents.py --run-once
+        run: python news_agent.py --run-once
