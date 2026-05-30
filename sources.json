@@ -1,1 +1,39 @@
+[
+  {
+    "name": "Axios",
+    "feed_url": "https://api.axios.com/feed/"
+  },
+  {
+    "name": "The Hill",
+    "feed_url": "https://thehill.com/feed/"
+  },
+  {
+    "name": "CNN U.S.",
+    "feed_url": "http://rss.cnn.com/rss/cnn_us.rss"
+  },
+  {
+    "name": "CBS News Latest",
+    "feed_url": "https://www.cbsnews.com/latest/rss/main"
+  },
+  {
+    "name": "ABC News Top Stories",
+    "feed_url": "https://abcnews.go.com/abcnews/topstories"
+  },
+  {
+    "name": "NBC News Top Stories",
+    "feed_url": "https://feeds.nbcnews.com/nbcnews/public/news"
+  },
+  {
+    "name": "The New York Times Home Page",
+    "feed_url": "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"
+  },
+  {
+    "name": "Fox News Latest",
+    "feed_url": "https://moxie.foxnews.com/google-publisher/latest.xml"
+  },
+  {
+    "name": "TIME",
+    "feed_url": "https://time.com/feed/"
+  }
+]
 
