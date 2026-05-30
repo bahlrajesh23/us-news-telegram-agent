@@ -40,4 +40,4 @@ A Python agent that pulls news from major US news RSS feeds, deduplicates items,
 4. Open this URL in your browser, replacing the token:
 
 ```text
-https://api.telegram.org/bot<8856823898:AAGQOlLZjKq_tLOkh55McfNBmuQtQOXYWmk>/getUpdates
+https://api.telegram.org/bot<8906112260:AAEGsN97ZkE7QQPYCDOSsfqJhHvXv3AqGPU>/getUpdates
