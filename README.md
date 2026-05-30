@@ -30,7 +30,7 @@ A Python agent that pulls news from major US news RSS feeds, deduplicates items,
 
 1. Add the bot to your channel.
 2. Promote it to **Admin**.
-3. Set `TELEGRAM_CHAT_ID=@your_channel_username`
+3. Set `TELEGRAM_CHAT_ID=@Bahlrajesh_clawnews_bot`
 
 ### Private channel
 
@@ -40,4 +40,4 @@ A Python agent that pulls news from major US news RSS feeds, deduplicates items,
 4. Open this URL in your browser, replacing the token:
 
 ```text
-https://api.telegram.org/bot<YOUR_BOT_TOKEN>/getUpdates
+https://api.telegram.org/bot<8856823898:AAGQOlLZjKq_tLOkh55McfNBmuQtQOXYWmk>/getUpdates
