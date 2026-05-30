@@ -1,0 +1,39 @@
+name: Daily US News Digest
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "5 13 * * *" # 9:05 AM America/New_York during daylight saving time
+
+jobs:
+  run-news-agent:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run news agent
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TIMEZONE: America/New_York
+          LOOKBACK_HOURS: "24"
+          MAX_ITEMS: "15"
+          ENABLE_ARTICLE_SNIPPETS: "true"
+          ARTICLE_SNIPPET_LIMIT: "8"
+          SEND_EMPTY_DIGEST: "false"
+          REQUEST_TIMEOUT: "15"
+          EXCLUDE_URL_KEYWORDS: "sports,outkick,/video/"
+          EXCLUDE_TITLE_KEYWORDS: "newsletter"
+          SOURCES_FILE: "sources.json"
+          STATE_FILE: "state.json"
+        run: python news_agent.py --run-once
