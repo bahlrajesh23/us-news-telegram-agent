@@ -3,11 +3,7 @@ name: Daily US News Digest
 on:
   workflow_dispatch:
   schedule:
-    - cron: "10 5 * * *"   # 10:40 AM IST
-    - cron: "35 6 * * *"   # 12:05 PM IST
-    - cron: "30 8 * * *"   # 2:00 PM IST
-    - cron: "30 14 * * *"  # 8:00 PM IST
-
+    - cron: "*/5 * * * *"
 
 jobs:
   run-news-agent:
@@ -45,7 +41,7 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           TIMEZONE: Asia/Kolkata
-          LOOKBACK_HOURS: "8"
+          LOOKBACK_HOURS: "2"
           MAX_ITEMS: "15"
           ENABLE_ARTICLE_SNIPPETS: "true"
           ARTICLE_SNIPPET_LIMIT: "8"
