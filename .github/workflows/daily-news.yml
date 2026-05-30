@@ -3,10 +3,11 @@ name: Daily US News Digest
 on:
   workflow_dispatch:
   schedule:
-    - cron: "30 3 * * *"   # 9:00 AM IST
+    - cron: "10 5 * * *"   # 10:40 AM IST
     - cron: "35 6 * * *"   # 12:05 PM IST
     - cron: "30 8 * * *"   # 2:00 PM IST
     - cron: "30 14 * * *"  # 8:00 PM IST
+
 
 jobs:
   run-news-agent:
