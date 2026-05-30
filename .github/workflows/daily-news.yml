@@ -3,7 +3,7 @@ name: Daily US News Digest
 on:
   workflow_dispatch:
   schedule:
-    - cron: "5 13 * * *" # 9:05 AM America/New_York during daylight saving time
+    - cron: "5 13 * * *"
 
 jobs:
   run-news-agent:
@@ -20,6 +20,11 @@ jobs:
 
       - name: Install dependencies
         run: pip install -r requirements.txt
+
+      - name: Show files
+        run: |
+          pwd
+          ls -la
 
       - name: Run news agent
         env:
