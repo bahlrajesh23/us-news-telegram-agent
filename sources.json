@@ -1,39 +1,46 @@
 [
   {
-    "name": "Axios",
-    "feed_url": "https://api.axios.com/feed/"
+    "name": "MarketWatch Top Stories",
+    "feed_url": "https://feeds.content.dowjones.io/public/rss/mw_topstories"
   },
   {
-    "name": "The Hill",
-    "feed_url": "https://thehill.com/feed/"
+    "name": "WSJ Markets News",
+    "feed_url": "https://feeds.a.dj.com/rss/RSSMarketsMain.xml"
   },
   {
-    "name": "CNN U.S.",
-    "feed_url": "http://rss.cnn.com/rss/cnn_us.rss"
+    "name": "WSJ US Business",
+    "feed_url": "https://feeds.a.dj.com/rss/WSJcomUSBusiness.xml"
   },
   {
-    "name": "CBS News Latest",
-    "feed_url": "https://www.cbsnews.com/latest/rss/main"
+    "name": "CNBC Finance",
+    "feed_url": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=10000664"
   },
   {
-    "name": "ABC News Top Stories",
-    "feed_url": "https://abcnews.go.com/abcnews/topstories"
+    "name": "CNBC Economy",
+    "feed_url": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=20910258"
   },
   {
-    "name": "NBC News Top Stories",
-    "feed_url": "https://feeds.nbcnews.com/nbcnews/public/news"
+    "name": "CNBC Companies",
+    "feed_url": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=15839069"
   },
   {
-    "name": "The New York Times Home Page",
-    "feed_url": "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"
+    "name": "Fortune",
+    "feed_url": "https://fortune.com/feed/"
   },
   {
-    "name": "Fox News Latest",
-    "feed_url": "https://moxie.foxnews.com/google-publisher/latest.xml"
+    "name": "Forbes Business",
+    "feed_url": "https://www.forbes.com/business/feed/"
   },
   {
-    "name": "TIME",
-    "feed_url": "https://time.com/feed/"
+    "name": "Investor's Business Daily",
+    "feed_url": "https://www.investors.com/feed/"
+  },
+  {
+    "name": "Seeking Alpha Market Currents",
+    "feed_url": "https://seekingalpha.com/market_currents.xml"
+  },
+  {
+    "name": "Benzinga News",
+    "feed_url": "https://www.benzinga.com/general/feed"
   }
 ]
-
