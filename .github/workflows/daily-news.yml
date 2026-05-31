@@ -1,9 +1,12 @@
-name: Daily US News Digest
+name: US Finance News to Telegram
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "10 5 * * *"   # 10:40 AM IST
+    - cron: "35 6 * * *"   # 12:05 PM IST
+    - cron: "30 8 * * *"   # 2:00 PM IST
+    - cron: "30 14 * * *"  # 8:00 PM IST
 
 jobs:
   run-news-agent:
@@ -41,14 +44,14 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           TIMEZONE: Asia/Kolkata
-          LOOKBACK_HOURS: "2"
-          MAX_ITEMS: "15"
-          ENABLE_ARTICLE_SNIPPETS: "true"
-          ARTICLE_SNIPPET_LIMIT: "8"
+          LOOKBACK_HOURS: "15"
+          MAX_ITEMS: "20"
+          ENABLE_ARTICLE_SNIPPETS: "false"
+          ARTICLE_SNIPPET_LIMIT: "0"
           SEND_EMPTY_DIGEST: "false"
           REQUEST_TIMEOUT: "15"
           EXCLUDE_URL_KEYWORDS: "sports,outkick,/video/"
-          EXCLUDE_TITLE_KEYWORDS: "newsletter"
+          EXCLUDE_TITLE_KEYWORDS: "newsletter,podcast"
           SOURCES_FILE: "sources.json"
           STATE_FILE: "state.json"
-        run: python new_agents.py --run-once
+        run: python news_agent.py --run-once
