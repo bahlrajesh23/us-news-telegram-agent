@@ -54,4 +54,4 @@ jobs:
           EXCLUDE_TITLE_KEYWORDS: "newsletter,podcast"
           SOURCES_FILE: "sources.json"
           STATE_FILE: "state.json"
-        run: python news_agent.py --run-once
+        run: python new_agents.py --run-once
