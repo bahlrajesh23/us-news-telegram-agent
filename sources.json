@@ -1,46 +1,34 @@
 [
   {
-    "name": "MarketWatch Top Stories",
-    "feed_url": "https://feeds.content.dowjones.io/public/rss/mw_topstories"
+    "name": "Reuters Business",
+    "feed_url": "https://news.google.com/rss/search?q=site:reuters.com/business&hl=en-US&gl=US&ceid=US:en"
   },
   {
-    "name": "WSJ Markets News",
-    "feed_url": "https://feeds.a.dj.com/rss/RSSMarketsMain.xml"
+    "name": "Reuters Markets",
+    "feed_url": "https://news.google.com/rss/search?q=site:reuters.com/markets&hl=en-US&gl=US&ceid=US:en"
   },
   {
-    "name": "WSJ US Business",
-    "feed_url": "https://feeds.a.dj.com/rss/WSJcomUSBusiness.xml"
+    "name": "Yahoo Finance",
+    "feed_url": "https://finance.yahoo.com/news/rssindex"
   },
   {
     "name": "CNBC Finance",
     "feed_url": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=10000664"
   },
   {
-    "name": "CNBC Economy",
-    "feed_url": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=20910258"
-  },
-  {
     "name": "CNBC Companies",
     "feed_url": "https://search.cnbc.com/rs/search/combinedcms/view.xml?partnerId=wrss01&id=15839069"
   },
   {
-    "name": "Fortune",
-    "feed_url": "https://fortune.com/feed/"
+    "name": "TechCrunch",
+    "feed_url": "https://techcrunch.com/feed/"
   },
   {
-    "name": "Forbes Business",
-    "feed_url": "https://www.forbes.com/business/feed/"
+    "name": "Caixin Global",
+    "feed_url": "https://news.google.com/rss/search?q=site:caixinglobal.com&hl=en-US&gl=US&ceid=US:en"
   },
   {
-    "name": "Investor's Business Daily",
-    "feed_url": "https://www.investors.com/feed/"
-  },
-  {
-    "name": "Seeking Alpha Market Currents",
-    "feed_url": "https://seekingalpha.com/market_currents.xml"
-  },
-  {
-    "name": "Benzinga News",
-    "feed_url": "https://www.benzinga.com/general/feed"
+    "name": "SCMP Business",
+    "feed_url": "https://www.scmp.com/rss/92/feed/"
   }
 ]
