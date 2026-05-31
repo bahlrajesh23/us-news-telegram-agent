@@ -338,10 +338,8 @@ def format_item(item: NewsItem, tzinfo: ZoneInfo, index: int) -> str:
     parts = [
         f"{index}. <b>{html.escape(item.title)}</b>",
         f"<i>{html.escape(item.source)} • {html.escape(published)}</i>",
+        f'<a href="{html.escape(item.link, quote=True)}">Read more</a>',
     ]
-    if item.summary:
-        parts.append(html.escape(item.summary))
-    parts.append(f'<a href="{html.escape(item.link, quote=True)}">Read more</a>')
     return "\n".join(parts) + "\n"
 
 
@@ -476,6 +474,22 @@ def build_arg_parser() -> argparse.ArgumentParser:
 
 
 def main() -> None:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
     logging.basicConfig(level=logging.INFO, format="%(asctime)s | %(levelname)s | %(message)s")
     parser = build_arg_parser()
     args = parser.parse_args()
